@@ -7,11 +7,14 @@ public class Date {
 	private int _year;
 	
 	private int _julianDay;
+	private String _dateString;
 
 	protected Date(int day, int month, int year) {
 		_day = day;
 		_month = month;
 		_year = year;
+		
+		_dateString = String.format("%02d %02d %04d", day, month, year);
 		
 		int a = (14-_month) / 12;
 		int y = _year + 4800 - a;
@@ -40,6 +43,12 @@ public class Date {
 		}
 		Date other = (Date) obj;
 		return (_julianDay == other._julianDay);
+	}
+	
+	@Override
+	public String toString()
+	{
+		return _dateString;
 	}
 
 	public int delta(Date otherDate) {

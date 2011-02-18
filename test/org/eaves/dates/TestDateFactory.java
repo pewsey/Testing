@@ -14,6 +14,7 @@ public class TestDateFactory {
 		_df = new DateFactory();
 	}
 
+	@Test
 	public void testCreateWithValid() {
 		Date d = _df.createDate(10, 01, 2011);
 		assertNotNull(d);
@@ -39,6 +40,7 @@ public class TestDateFactory {
 		_df.createDate(29, 02, 2001);
 	}
 
+	@Test
 	public void testLeapYearFebruary() {
 		assertNotNull(_df.createDate(29, 02, 2004));
 	}
