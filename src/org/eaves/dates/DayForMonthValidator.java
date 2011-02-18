@@ -22,10 +22,8 @@ public class DayForMonthValidator implements Validator {
 			return false;
 		}
 		int maxMonthDay = MAX_DAY[_month];
-		if (_month == 2) {
-			if (isLeapYear()) {
-				maxMonthDay++;
-			}
+		if ((_month == 2) && isLeapYear()) {
+			maxMonthDay++;
 		}
 		range = new RangeValidator(_day, 1, maxMonthDay);
 		
