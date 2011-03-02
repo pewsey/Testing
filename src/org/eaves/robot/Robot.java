@@ -1,5 +1,13 @@
 package org.eaves.robot;
 
-public class Robot {
+public interface Robot {
+
+	void place(Location location);
+
+	void move();
+
+	void left();
+
+	void right();
 
 }

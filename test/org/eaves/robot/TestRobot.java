@@ -1,10 +1,8 @@
 package org.eaves.robot;
 
-import static org.junit.Assert.*;
-import junit.framework.Assert;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 
@@ -21,7 +19,7 @@ public class TestRobot {
 		
 		_comparable = new LocationOuputObserver(_robot);
 		
-		_robot.place(0,0, Direction.fromString("N"));
+		_robot.place(new Location(0,0, Direction.fromString("N")));
 	}
 	
 	@Test
