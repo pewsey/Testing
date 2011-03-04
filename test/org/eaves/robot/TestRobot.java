@@ -21,11 +21,11 @@ public class TestRobot {
 		
 		_robot.place(new Location(0,0, Direction.fromString("N")));
 	}
-	
+		
 	@Test
 	public void testCreateEnvironment()
 	{
-		assertEquals(_comparable.getCurrentLocation(), new Location(0,0, Direction.fromString("N")));
+		assertEquals(new Location(0,0, Direction.fromString("N")), _comparable.getCurrentLocation());
 	}
 	
 	@Test
