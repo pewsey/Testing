@@ -19,30 +19,30 @@ public class TestRobot {
 		
 		_comparable = new LocationOuputObserver(_robot);
 		
-		_robot.place(new Location(0,0, Direction.fromString("N")));
+		_robot.place(new Location(0,0, Direction.valueOf("NORTH")));
 	}
 		
 	@Test
 	public void testCreateEnvironment()
 	{
-		assertEquals(new Location(0,0, Direction.fromString("N")), _comparable.getCurrentLocation());
+		assertEquals(new Location(0,0, Direction.valueOf("NORTH")), _comparable.getCurrentLocation());
 	}
 	
 	@Test
 	public void testMove() {
 		_robot.move();
-		assertEquals(_comparable.getCurrentLocation(), new Location(0,1, Direction.fromString("N")));
+		assertEquals(_comparable.getCurrentLocation(), new Location(0,1, Direction.valueOf("N")));
 	}
 	
 	@Test
 	public void testTurnLeft() {
 		_robot.left();
-		assertEquals(_comparable.getCurrentLocation(), new Location(0,0, Direction.fromString("W")));
+		assertEquals(_comparable.getCurrentLocation(), new Location(0,0, Direction.valueOf("W")));
 	}
 	
 	@Test
 	public void testTurnRight() {
 		_robot.right();
-		assertEquals(_comparable.getCurrentLocation(), new Location(0,1, Direction.fromString("E")));
+		assertEquals(_comparable.getCurrentLocation(), new Location(0,1, Direction.valueOf("E")));
 	}
 }
