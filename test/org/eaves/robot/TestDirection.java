@@ -34,5 +34,12 @@ public class TestDirection {
         Direction west = Direction.WEST;
         assertEquals(Direction.NORTH, west.right());
     }
+    
+    @Test
+    public void testLeftFromSouth()
+    {
+    	Direction south = Direction.SOUTH;
+    	assertEquals(Direction.EAST, south.left());
+    }
 
 }
