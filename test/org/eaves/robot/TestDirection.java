@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-
 public class TestDirection {
     
     @Test
@@ -40,6 +39,13 @@ public class TestDirection {
     {
     	Direction south = Direction.SOUTH;
     	assertEquals(Direction.EAST, south.left());
+    }
+    
+    @Test
+    public void testRightFromEast()
+    {
+    	Direction east = Direction.EAST;
+    	assertEquals(Direction.SOUTH, east.right());
     }
 
 }
