@@ -2,14 +2,14 @@ package org.eaves.robot;
 
 public interface Robot {
 
-	void place(Location location);
-
 	void move();
 
 	void left();
 
 	void right();
 
-	Location currentLocation();
+	boolean place(Location location, Direction facing);
 
+	boolean isLocated(Location location);
+	boolean isFacing(Direction facing);
 }
