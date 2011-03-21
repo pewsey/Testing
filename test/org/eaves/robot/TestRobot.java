@@ -31,18 +31,18 @@ public class TestRobot {
 	@Test
 	public void testMove() {
 		_robot.move();
-		assertEquals(_comparable.getCurrentLocation(), new Location(0,1, Direction.valueOf("N")));
+		assertEquals(new Location(0,1, Direction.valueOf("NORTH")), _comparable.getCurrentLocation());
 	}
 	
 	@Test
 	public void testTurnLeft() {
 		_robot.left();
-		assertEquals(_comparable.getCurrentLocation(), new Location(0,0, Direction.valueOf("W")));
+		assertEquals(new Location(0,0, Direction.valueOf("WEST")), _comparable.getCurrentLocation());
 	}
 	
 	@Test
 	public void testTurnRight() {
 		_robot.right();
-		assertEquals(_comparable.getCurrentLocation(), new Location(0,1, Direction.valueOf("E")));
+		assertEquals(new Location(0,1, Direction.valueOf("EAST")), _comparable.getCurrentLocation());
 	}
 }

@@ -1,9 +1,6 @@
 package org.eaves.robot;
 
-public class Observer {
+public interface Observer {
 
-	public Location getCurrentLocation() {
-		return null;
-	}
-
+	public Location getCurrentLocation();
 }

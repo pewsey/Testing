@@ -12,6 +12,22 @@ public class Location {
 		_direction = direction;
 	}
 
+	private Direction getDirection() {
+		return _direction;
+	}
+
+	public int getX() {
+		return _x;
+	}
+	
+	public int getY() {
+		return _y;
+	}
+	
+	public Location evaluate(int stepSize) {
+		return new Location(_x+_direction.xDeltaForward(), _y+_direction.yDeltaForward(), _direction);
+	}	
+
 	@Override
 	public int hashCode() {
 		int result = 17;
@@ -23,14 +39,19 @@ public class Location {
 
 	@Override
 	public boolean equals(Object obj) {
-		return super.equals(obj);
+		if (this == obj) {
+			return true;
+		}
+		if ( !(obj instanceof Location)) {
+			return false;
+		}
+		Location that = (Location)obj;
+		return ((_x == that.getX()) && (_y == that.getY()) && (_direction == that.getDirection()));
 	}
 
 	@Override
 	public String toString() {
-		return super.toString();
+		return _x + ", " + _y + " - " + _direction;
 	}
-	
-	
 
 }

@@ -12,6 +12,16 @@ public enum Direction {
         public Direction right() {
             return null;
         }
+
+		@Override
+		public int xDeltaForward() {
+			return 0;
+		}
+
+		@Override
+		public int yDeltaForward() {
+			return 1;
+		}
     },
     
     EAST {
@@ -24,6 +34,16 @@ public enum Direction {
         public Direction right() {
             return SOUTH;
         }
+
+		@Override
+		public int xDeltaForward() {
+			return 1;
+		}
+
+		@Override
+		public int yDeltaForward() {
+			return 0;
+		}
     },
     
     SOUTH {
@@ -36,6 +56,16 @@ public enum Direction {
         public Direction right() {
             return WEST;
         }
+
+		@Override
+		public int xDeltaForward() {
+			return 0;
+		}
+
+		@Override
+		public int yDeltaForward() {
+			return -1;
+		}
     },
     
     WEST {
@@ -48,9 +78,22 @@ public enum Direction {
         public Direction right() {
             return NORTH;
         }
+
+		@Override
+		public int xDeltaForward() {
+			return -1;
+		}
+
+		@Override
+		public int yDeltaForward() {
+			return 0;
+		}
         
     };
 
-    public abstract Direction left();
+	public abstract Direction left();
     public abstract Direction right();
+    public abstract int xDeltaForward();
+    public abstract int yDeltaForward();
+    
 }

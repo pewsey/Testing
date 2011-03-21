@@ -10,4 +10,6 @@ public interface Robot {
 
 	void right();
 
+	Location currentLocation();
+
 }
